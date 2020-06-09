@@ -1,1 +1,27 @@
 @import "~reset.css/reset.css";
+
+body {
+  background-color: #200f21;
+  color: #f638dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2em;
+  font-family: "Baskerville", serif;
+}
+
+.game {
+  max-width: 1024px;
+
+  &__header {
+    padding: 32px 0;
+  }
+}
+
+.board {
+  > .tile {
+    background-image: url('./resources/ape.jpg');
+  }
+}

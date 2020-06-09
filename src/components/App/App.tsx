@@ -1,8 +1,8 @@
 import React from 'react';
 import { useMachine } from '@xstate/react/lib';
-import BoardComponent from './components/BoardComponent/BoardComponent';
-import { getDirectionByKeyCode } from './utils';
-import { createMachine } from './state';
+import BoardComponent from '../BoardComponent/BoardComponent';
+import { getDirectionByKeyCode } from '../../utils';
+import { createMachine } from '../../state';
 
 const NUM_ROWS = 4;
 const NUM_COLS = 4;
@@ -22,10 +22,6 @@ const App = () => {
     },
     [send],
   );
-
-  const handleStart = React.useCallback(() => {
-    send({ type: 'START' });
-  }, [send]);
 
   React.useEffect(() => {
     const listener = (event: KeyboardEvent) => {
